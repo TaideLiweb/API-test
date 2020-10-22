@@ -14,17 +14,6 @@ Vue.filter('date', (value) => {
   return date;
 });
 Vue.filter('sale', (value) => `可售${value}位`);
-// Vue.filter('rating', (value) => {
-// let rating = '';
-// for (let i = 0; i < 5; i += 1) {
-//   if (i < value) {
-//     rating += '<i class="fas fa-star" style="color:#aaa"></i>';
-//   } else {
-//     rating += '<i class="fas fa-star"></i>';
-//   }
-// }
-// return rating;
-// });
 new Vue({
   router,
   render: (h) => h(App),

@@ -166,16 +166,10 @@ export default {
   },
   methods: {
     sort_method(value) {
-      this.axios.get(`http://interview.tripresso.com/tour/search?sort=${value}`).then((res) => {
+      this.axios.get(`https://interview.tripresso.com/tour/search?sort=${value}`).then((res) => {
         this.products = res.data.data.tour_list;
       });
     },
-    //               v-for="(item, index) in size"
-    //           :key="item.size"
-    //           @click="checkSize(index)"
-    //           class="size_box p-1 mr-2"
-    //           :class="{ size_box_active: checkSizeIndex == index }"
-    //           checkSizeIndex: 0,
     checkSize(value) {
       this.categorys.forEach((category, index) => {
         if (value === category) {
